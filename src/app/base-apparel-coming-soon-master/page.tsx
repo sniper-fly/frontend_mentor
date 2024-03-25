@@ -7,10 +7,6 @@ export default function Page() {
   return (
     <>
       <div className="flex flex-row">
-        {/* <div> */}
-        {/* <div className={`bg-fixed ${styles.bg_wallpaper}`}>
-        <div></div>
-      </div> */}
         <div
           className="bg-cover w-3/5 h-screen"
           style={{
@@ -29,19 +25,21 @@ export default function Page() {
                 alt="logo"
               />
             </div>
+
             {/* ページ説明ブロック */}
-            <div className="text-left">
-              <h1 className="text-5xl">
-                <span className="block text-rose-400 font-thin">WE'RE</span>
-                <span className="block text-gray-800">COMING</span>
-                <span className="block text-gray-800">SOON</span>
+            <div className="text-left px-10">
+              <h1 className="text-7xl tracking-widest mb-7">
+                <span className="block text-rose-800 font-thin">WE'RE</span>
+                <span className="block font-medium text-gray-800">COMING</span>
+                <span className="block font-medium text-gray-800">SOON</span>
               </h1>
-              <p className="">
+              <p className="leading-relaxed text-rose-800">
                 Hello fellow shoppers! We're currently building our new fashion
                 store. Add your email below to stay up-to-date with
                 announcements and our launch deals.
               </p>
             </div>
+
           </div>
         </div>
 
