@@ -1,8 +1,16 @@
+'use client'
+
 // import styles from "./styles.module.css";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Page() {
   const imagePath = "/base-apparel-coming-soon-master/";
+  const [email, setEmail] = useState("a@a.com");
+
+  const isCorrectEmail = email.match(
+    /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
+  );
 
   return (
     <>
@@ -48,7 +56,7 @@ export default function Page() {
               <form className="flex mt-9 rounded-full shadow-rose-700 shadow">
                 <input
                   type="text"
-                  className=" bg-transparent pl-6 py-3"
+                  className=" bg-transparent pl-6 py-3 w-full outline-none"
                   placeholder="Email Address"
                 />
                 <Image
@@ -56,7 +64,7 @@ export default function Page() {
                   alt="error"
                   width={20}
                   height={20}
-                  className="w-5 h-5 my-auto mr-4"
+                  className={`w-5 h-5 my-auto mr-4 ${isCorrectEmail ? "invisible" : ""}`}
                 />
                 <button className="w-28 bg-rose-200 rounded-full">
                   <Image
