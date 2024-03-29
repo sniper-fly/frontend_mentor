@@ -7,10 +7,20 @@ import { useState } from "react";
 export default function Page() {
   const imagePath = "/base-apparel-coming-soon-master/";
   const [email, setEmail] = useState("");
+  const [shouldShowError, setShouldShowError] = useState(false);
 
-  const isCorrectEmail = email.match(
-    /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
-  );
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    const isCorrectEmail = email.match(
+      /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
+    );
+    if (isCorrectEmail) {
+      alert("Thanks for subscribing!");
+      setShouldShowError(false);
+    } else {
+      e.preventDefault();
+      setShouldShowError(true);
+    }
+  }
 
   return (
     <>
@@ -52,7 +62,10 @@ export default function Page() {
               </div>
 
               {/* フォーム */}
-              <form className="flex mt-9 rounded-full shadow-rose-400 shadow">
+              <form
+                onSubmit={handleSubmit}
+                className="flex mt-9 rounded-full shadow-rose-400 shadow"
+              >
                 <input
                   type="text"
                   className=" bg-transparent pl-6 py-3 w-full outline-none placeholder-rose-300"
@@ -66,7 +79,7 @@ export default function Page() {
                   width={20}
                   height={20}
                   className={`w-5 h-5 my-auto mr-4 ${
-                    email == "" || isCorrectEmail ? "invisible" : ""
+                    !shouldShowError && "invisible"
                   }`}
                 />
                 <button className="w-28 bg-rose-200 rounded-full bg-gradient-to-r from-rose-200 to-rose-300">
