@@ -25,15 +25,18 @@ export default function Page() {
   return (
     <>
       <div className="flex flex-row">
+
+        {/* 説明、フォームなど */}
         <div
-          className="bg-cover w-3/5 h-screen"
+          className="bg-cover w-1/2 lg:w-3/5 h-screen"
           style={{
             backgroundImage: `url(${imagePath}/bg-pattern-desktop.svg)`,
           }}
         >
           {/* base apparerlから始まる一連の説明など */}
-          <div className="pl-40">
+          <div className="lg:pl-40">
             <div className="px-10">
+
               {/* ロゴ */}
               <div className="my-8 mb-20 mt-12">
                 <Image
@@ -96,8 +99,9 @@ export default function Page() {
           </div>
         </div>
 
+        {/* モデル写真バックグラウンド */}
         <div
-          className="bg-cover w-2/5 h-screen"
+          className="bg-cover w-1/2 lg:w-2/5 h-screen"
           style={{
             backgroundImage: `url(${imagePath}/hero-desktop.jpg)`,
           }}
