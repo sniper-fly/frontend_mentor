@@ -48,13 +48,13 @@ export default function Page() {
               {/* ページ説明ブロック */}
               <div className="text-left">
                 <h1 className="text-7xl tracking-widest mb-7">
-                  <span className="block text-rose-300 font-thin">WE'RE</span>
+                  <span className="block text-[#ce9797] font-thin">WE'RE</span>
                   <span className="block font-medium text-gray-800">
                     COMING
                   </span>
                   <span className="block font-medium text-gray-800">SOON</span>
                 </h1>
-                <p className="leading-relaxed text-rose-300">
+                <p className="leading-relaxed text-[#ce9797]">
                   Hello fellow shoppers! We're currently building our new
                   fashion store. Add your email below to stay up-to-date with
                   announcements and our launch deals.
@@ -64,11 +64,11 @@ export default function Page() {
               {/* フォーム */}
               <form
                 onSubmit={handleSubmit}
-                className="flex mt-9 rounded-full shadow-rose-400 shadow"
+                className="flex mt-9 rounded-full shadow-[#ce9797] shadow"
               >
                 <input
                   type="text"
-                  className=" bg-transparent pl-6 py-3 w-full outline-none placeholder-rose-300"
+                  className=" bg-transparent pl-6 py-3 w-full outline-none placeholder-[#ce9797]"
                   placeholder="Email Address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -82,7 +82,7 @@ export default function Page() {
                     !shouldShowError && "invisible"
                   }`}
                 />
-                <button className="w-28 bg-rose-200 rounded-full bg-gradient-to-r from-rose-200 to-rose-300">
+                <button className="w-28 rounded-full bg-gradient-to-r from-[#f5a8a8] to-[#ea8585]">
                   <Image
                     src={`${imagePath}/icon-arrow.svg`}
                     alt="arrow"
