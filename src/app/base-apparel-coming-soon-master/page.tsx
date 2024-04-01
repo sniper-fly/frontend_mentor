@@ -25,7 +25,6 @@ export default function Page() {
   return (
     <>
       <div className="flex flex-col md:flex-row">
-
         {/* 説明、フォームなど */}
         <div
           className="bg-cover w-full md:w-1/2 lg:w-3/5 md:h-screen"
@@ -35,19 +34,19 @@ export default function Page() {
         >
           {/* base apparerlから始まる一連の説明など */}
           <div className="lg:pl-40">
-            <div className="max-w-md mx-auto px-10">
 
-              {/* ロゴ */}
-              <div className="my-8 mb-20 mt-12">
-                <Image
-                  src={`${imagePath}/logo.svg`}
-                  width={36}
-                  height={36}
-                  className="w-36"
-                  alt="logo"
-                />
-              </div>
+            {/* ロゴ */}
+            <div className="px-10 my-8 md:mb-20 md:mt-12">
+              <Image
+                src={`${imagePath}/logo.svg`}
+                width={36}
+                height={36}
+                className="w-24 md:w-36"
+                alt="logo"
+              />
+            </div>
 
+            <div className="max-w-md lg:max-w-lg mx-auto md:mx-0 px-10">
               {/* ページ説明ブロック */}
               <div className="md:text-left text-center">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl tracking-widest mb-7">
