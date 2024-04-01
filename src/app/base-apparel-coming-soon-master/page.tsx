@@ -34,7 +34,6 @@ export default function Page() {
         >
           {/* base apparerlから始まる一連の説明など */}
           <div className="lg:pl-40">
-
             {/* ロゴ */}
             <div className="px-10 my-8 md:mb-20 md:mt-12">
               <Image
@@ -45,6 +44,14 @@ export default function Page() {
                 alt="logo"
               />
             </div>
+
+            {/* モデル写真バックグラウンド md以下 */}
+            <div
+              className="md:hidden bg-cover w-full h-80 mb-10"
+              style={{
+                backgroundImage: `url(${imagePath}/hero-mobile.jpg)`,
+              }}
+            ></div>
 
             <div className="max-w-md lg:max-w-lg mx-auto md:mx-0 px-10">
               {/* ページ説明ブロック */}
@@ -98,9 +105,9 @@ export default function Page() {
           </div>
         </div>
 
-        {/* モデル写真バックグラウンド */}
+        {/* モデル写真バックグラウンド md以上用 */}
         <div
-          className="bg-cover w-full md:w-1/2 lg:w-2/5 h-screen"
+          className="hidden md:block bg-cover w-full md:w-1/2 lg:w-2/5 h-screen"
           style={{
             backgroundImage: `url(${imagePath}/hero-desktop.jpg)`,
           }}

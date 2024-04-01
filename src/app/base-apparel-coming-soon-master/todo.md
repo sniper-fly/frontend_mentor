@@ -6,3 +6,4 @@ https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values
 背景、説明、ロゴの並び替えにも対応できるように
 
 - zodでformのバリデーションを行う
+- bgイメージをarbitary valuesで対応
