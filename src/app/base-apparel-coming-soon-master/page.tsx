@@ -2,26 +2,16 @@
 
 // import styles from "./styles.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import registerEmail from "./registerEmail";
+import { FormState } from "./registerEmail";
+import { useFormState } from "react-dom";
 
 export default function Page() {
   const imagePath = "/base-apparel-coming-soon-master/";
-  const [email, setEmail] = useState("");
-  const [shouldShowError, setShouldShowError] = useState(false);
+  const initialState: FormState = { errors: {} };
+  const [errorState, dispatch] = useFormState<FormState, FormData>(registerEmail, initialState);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    const isCorrectEmail = email.match(
-      /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
-    );
-    if (isCorrectEmail) {
-      alert("Thanks for subscribing!");
-      setShouldShowError(false);
-    } else {
-      e.preventDefault();
-      setShouldShowError(true);
-    }
-  }
-
+  console.log(errorState)
   return (
     <>
       <div className="flex flex-col md:flex-row">
@@ -72,15 +62,17 @@ export default function Page() {
 
               {/* フォーム */}
               <form
-                onSubmit={handleSubmit}
+                action={dispatch}
+                // onSubmit={handleSubmit}
                 className="flex mt-9 rounded-full shadow-[#ce9797] shadow"
               >
                 <input
                   type="text"
+                  name="email"
                   className=" bg-transparent pl-6 py-3 w-full outline-none placeholder-[#ce9797]"
                   placeholder="Email Address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  // value={email}
+                  // onChange={(e) => setEmail(e.target.value)}
                 />
                 <Image
                   src={`${imagePath}/icon-error.svg`}
@@ -88,7 +80,7 @@ export default function Page() {
                   width={20}
                   height={20}
                   className={`w-5 h-5 my-auto mr-4 ${
-                    !shouldShowError && "invisible"
+                    errorState === undefined && "invisible"
                   }`}
                 />
                 <button className="w-28 rounded-full bg-gradient-to-r from-[#f5a8a8] to-[#ea8585]">
