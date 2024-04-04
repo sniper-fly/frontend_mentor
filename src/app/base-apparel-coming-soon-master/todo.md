@@ -5,5 +5,4 @@ https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values
 説明文の箇所のみモバイル対応 (3/30)
 背景、説明、ロゴの並び替えにも対応できるように
 - zodでformのバリデーションを行う(4/3)
-
-- bgイメージをarbitary valuesで対応
+- bgイメージをarbitary valuesで対応(4/4)
