@@ -11,14 +11,15 @@ export default function Page() {
   const initialState: FormState = { errors: {} };
   const [errorState, dispatch] = useFormState<FormState, FormData>(
     registerEmail,
-    initialState
+    initialState,
   );
 
   return (
     <>
       <div className="flex flex-col md:flex-row">
         {/* 説明、フォームなど */}
-        <div className="bg-cover w-full md:w-1/2 lg:w-3/5 md:h-screen"
+        <div
+          className="w-full bg-cover md:h-screen md:w-1/2 lg:w-3/5"
           style={{
             backgroundImage: `url(${basePath}/bg-pattern-desktop.svg)`,
           }}
@@ -26,7 +27,7 @@ export default function Page() {
           {/* base apparerlから始まる一連の説明など */}
           <div className="lg:pl-40">
             {/* ロゴ */}
-            <div className="px-10 my-8 md:mb-20 md:mt-12">
+            <div className="my-8 px-10 md:mb-20 md:mt-12">
               <Image
                 src={`${basePath}/logo.svg`}
                 width={36}
@@ -38,17 +39,17 @@ export default function Page() {
 
             {/* モデル写真バックグラウンド md以下 */}
             <div
-              className="md:hidden bg-cover w-full h-80 mb-10"
+              className="mb-10 h-80 w-full bg-cover md:hidden"
               style={{
                 backgroundImage: `url(${basePath}/hero-mobile.jpg)`,
               }}
             ></div>
 
-            <div className="max-w-md lg:max-w-lg mx-auto md:mx-0 px-10">
+            <div className="mx-auto max-w-md px-10 md:mx-0 lg:max-w-lg">
               {/* ページ説明ブロック */}
-              <div className="md:text-left text-center">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl tracking-widest mb-7">
-                  <span className="block text-[#ce9797] font-thin">WE'RE</span>
+              <div className="text-center md:text-left">
+                <h1 className="mb-7 text-5xl tracking-widest md:text-6xl lg:text-7xl">
+                  <span className="block font-thin text-[#ce9797]">WE'RE</span>
                   <span className="block font-medium text-gray-800">
                     COMING
                   </span>
@@ -64,12 +65,12 @@ export default function Page() {
               {/* フォーム */}
               <form
                 action={dispatch}
-                className="flex mt-9 rounded-full shadow-[#ce9797] shadow"
+                className="mt-9 flex rounded-full shadow shadow-[#ce9797]"
               >
                 <input
                   type="text"
                   name="email"
-                  className=" bg-transparent pl-6 py-3 w-full outline-none placeholder-[#ce9797]"
+                  className=" w-full bg-transparent py-3 pl-6 placeholder-[#ce9797] outline-none"
                   placeholder="Email Address"
                 />
                 <Image
@@ -77,7 +78,7 @@ export default function Page() {
                   alt="error"
                   width={20}
                   height={20}
-                  className={`w-5 h-5 my-auto mr-4 ${
+                  className={`my-auto mr-4 h-5 w-5 ${
                     errorState?.errors?.email === undefined && "invisible"
                   }`}
                 />
@@ -87,7 +88,7 @@ export default function Page() {
                     alt="arrow"
                     width={20}
                     height={20}
-                    className="w-4 h-5 mx-auto"
+                    className="mx-auto h-5 w-4"
                   />
                 </button>
               </form>
@@ -97,7 +98,7 @@ export default function Page() {
 
         {/* モデル写真バックグラウンド md以上用 */}
         <div
-          className="hidden md:block bg-cover w-full md:w-1/2 lg:w-2/5 h-screen"
+          className="hidden h-screen w-full bg-cover md:block md:w-1/2 lg:w-2/5"
           style={{
             backgroundImage: `url(${basePath}/hero-desktop.jpg)`,
           }}
