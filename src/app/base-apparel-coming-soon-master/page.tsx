@@ -7,7 +7,7 @@ import { FormState } from "./registerEmail";
 import { useFormState } from "react-dom";
 
 export default function Page() {
-  const imagePath = "/base-apparel-coming-soon-master/";
+  const imgPath = "/base-apparel-coming-soon-master/";
   const initialState: FormState = { errors: {} };
   const [errorState, dispatch] = useFormState<FormState, FormData>(
     registerEmail,
@@ -24,7 +24,7 @@ export default function Page() {
             {/* ロゴ */}
             <div className="px-10 my-8 md:mb-20 md:mt-12">
               <Image
-                src={`${imagePath}/logo.svg`}
+                src={`${imgPath}/logo.svg`}
                 width={36}
                 height={36}
                 className="w-24 md:w-36"
@@ -36,7 +36,7 @@ export default function Page() {
             <div
               className="md:hidden bg-cover w-full h-80 mb-10"
               style={{
-                backgroundImage: `url(${imagePath}/hero-mobile.jpg)`,
+                backgroundImage: `url(${imgPath}/hero-mobile.jpg)`,
               }}
             ></div>
 
@@ -72,7 +72,7 @@ export default function Page() {
                   // onChange={(e) => setEmail(e.target.value)}
                 />
                 <Image
-                  src={`${imagePath}/icon-error.svg`}
+                  src={`${imgPath}/icon-error.svg`}
                   alt="error"
                   width={20}
                   height={20}
@@ -82,7 +82,7 @@ export default function Page() {
                 />
                 <button className="w-28 rounded-full bg-gradient-to-r from-[#f5a8a8] to-[#ea8585]">
                   <Image
-                    src={`${imagePath}/icon-arrow.svg`}
+                    src={`${imgPath}/icon-arrow.svg`}
                     alt="arrow"
                     width={20}
                     height={20}
@@ -98,7 +98,7 @@ export default function Page() {
         <div
           className="hidden md:block bg-cover w-full md:w-1/2 lg:w-2/5 h-screen"
           style={{
-            backgroundImage: `url(${imagePath}/hero-desktop.jpg)`,
+            backgroundImage: `url(${imgPath}/hero-desktop.jpg)`,
           }}
         ></div>
       </div>
