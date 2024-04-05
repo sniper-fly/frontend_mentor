@@ -49,16 +49,14 @@ export default function Page() {
               {/* ページ説明ブロック */}
               <div className="text-center md:text-left">
                 <h1 className="mb-7 text-5xl tracking-widest md:text-6xl lg:text-7xl">
-                  <span className="block font-thin text-[#ce9797]">WE'RE</span>
+                  <span className="block font-thin text-[#ce9797]">{`WE'RE`}</span>
                   <span className="block font-medium text-gray-800">
                     COMING
                   </span>
                   <span className="block font-medium text-gray-800">SOON</span>
                 </h1>
                 <p className="leading-relaxed text-[#ce9797]">
-                  Hello fellow shoppers! We're currently building our new
-                  fashion store. Add your email below to stay up-to-date with
-                  announcements and our launch deals.
+                  {`Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.`}
                 </p>
               </div>
 
