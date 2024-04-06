@@ -1,6 +1,6 @@
 "use client";
 
-// import styles from "./styles.module.css";
+import styles from "./styles.module.css";
 import Image from "next/image";
 import registerEmail from "./registerEmail";
 import { FormState } from "./registerEmail";
@@ -55,7 +55,7 @@ export default function Page() {
                   </span>
                   <span className="block font-medium text-gray-800">SOON</span>
                 </h1>
-                <p className="leading-relaxed text-[#ce9797]">
+                <p className={`leading-relaxed ${styles.text_desaturated_red}`} >
                   {`Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.`}
                 </p>
               </div>
