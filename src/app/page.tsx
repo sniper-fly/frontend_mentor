@@ -15,14 +15,14 @@ function Card({
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center">
-      <Card className="mt-10">
+    <div className="flex flex-col pt-10 items-center">
+      <Card>
+        <Link href="/blog-preview-card-main">blog-preview-card-main</Link>
+      </Card>
+      <Card>
         <Link href="/base-apparel-coming-soon-master">
           base-apparel-coming-soon-master
         </Link>
-      </Card>
-      <Card>
-        <Link href="/blog-preview-card-main">blog-preview-card-main</Link>
       </Card>
     </div>
   );
