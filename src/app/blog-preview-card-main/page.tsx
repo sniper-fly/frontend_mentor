@@ -5,7 +5,7 @@ export default function Page() {
 
   return (
     <main className="flex h-screen items-center justify-center">
-      <section className="w-1/3 rounded-lg bg-white p-5 shadow-xl shadow-black">
+      <section className="w-1/3 rounded-3xl bg-white p-5 shadow-xl shadow-black">
         <Image
           src={`${basePath}/illustration-article.svg`}
           width={336}
@@ -22,14 +22,18 @@ export default function Page() {
           These languages are the backbone of every website, defining structure,
           content, and presentation.
         </p>
-        <Image
-          src={`${basePath}/image-avatar.webp`}
-          width={64}
-          height={64}
-          alt="image-avatar"
-          className="w-9 m-3"
-        />
-        <div className="text-sm font-semibold">Greg Hooper</div>
+        <div className="flex flex-row items-center justify-start pt-5">
+          <div className="mr-3">
+            <Image
+              src={`${basePath}/image-avatar.webp`}
+              width={64}
+              height={64}
+              alt="image-avatar"
+              className="w-9"
+            />
+          </div>
+          <div className="text-sm font-semibold">Greg Hooper</div>
+        </div>
       </section>
     </main>
   );
