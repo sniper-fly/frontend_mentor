@@ -17,7 +17,9 @@ export default function Page() {
           Learning
         </h2>
         <h2 className="my-2 text-sm">Published 21 Dec 2023</h2>
-        <h1 className="my-3 text-2xl font-bold">HTML & CSS foundations</h1>
+        <h1 className="my-3 text-2xl font-bold transition-colors hover:text-yellow-400">
+          HTML & CSS foundations
+        </h1>
         <p className="text-gray-500">
           These languages are the backbone of every website, defining structure,
           content, and presentation.
