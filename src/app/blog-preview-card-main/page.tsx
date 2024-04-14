@@ -5,7 +5,7 @@ export default function Page() {
 
   return (
     <main className="flex h-screen items-center justify-center">
-      <section className="w-1/3 rounded-3xl bg-white p-5 shadow-xl shadow-black">
+      <section className="w-1/3 rounded-3xl border border-black bg-white p-5 shadow-[10px_10px_black] transition-shadow hover:shadow-[17px_17px_black]">
         <Image
           src={`${basePath}/illustration-article.svg`}
           width={336}
