@@ -13,7 +13,7 @@ export default function Page() {
           alt="illustration-editor-desktop"
           className="mb-3 rounded-lg"
         />
-        <h2 className="my-2 inline-block rounded-md bg-yellow-400 px-4 py-1 text-xs font-semibold md:text-sm">
+        <h2 className="my-2 inline-block rounded-md bg-[color:hsl(47,88%,63%)] px-4 py-1 text-xs font-semibold md:text-sm">
           Learning
         </h2>
         <h2 className="my-2 text-xs md:text-sm">Published 21 Dec 2023</h2>
