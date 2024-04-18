@@ -17,6 +17,11 @@ export default function Home() {
   return (
     <div className="flex flex-col pt-10 items-center">
       <Card>
+        <Link href="/recipe-page-main">
+          recipe-page-main
+        </Link>
+      </Card>
+      <Card>
         <Link href="/blog-preview-card-main">blog-preview-card-main</Link>
       </Card>
       <Card>
