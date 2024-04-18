@@ -1,4 +1,10 @@
+import { Young_Serif } from "next/font/google";
 import Image from "next/image";
+
+const figtree = Young_Serif({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 export default function Page() {
   const basePath = "/blog-preview-card-main";
