@@ -10,26 +10,29 @@ export default function Page() {
   const basePath = "/recipe-page-main";
 
   return (
-    <main className="bg-white">
+    <main className="mx-auto max-w-2xl rounded-3xl bg-white p-10">
       <div>
         <Image
           src={`${basePath}/image-omelette.jpeg`}
           alt="Omelette"
           width={800}
           height={533}
+          className="rounded-xl"
         />
       </div>
       <section>
-        <h1>Simple Omelette Recipe</h1>
+        <h1 className={`${figtree.className} py-3 text-4xl`}>
+          Simple Omelette Recipe
+        </h1>
 
-        <p>
+        <p className="text-gray-600">
           An easy and quick dish, perfect for any meal. This classic omelette
           combines beaten eggs cooked to perfection, optionally filled with your
           choice of cheese, vegetables, or meats.
         </p>
 
         <div>
-          Preparation time
+          <p>Preparation time</p>
           <ul>
             Total: Approximately 10 minutes Preparation: 5 minutes Cooking: 5
             minutes
@@ -38,7 +41,7 @@ export default function Page() {
       </section>
 
       <section>
-        <h1>Ingredients</h1>
+        <h1 className={`${figtree.className} text-3xl text-orange-900`}>Ingredients</h1>
 
         <ul>
           <li>2-3 large eggs</li>
@@ -52,7 +55,7 @@ export default function Page() {
       </section>
 
       <section>
-        <h1>Instructions</h1>
+        <h1 className={`${figtree.className} text-3xl text-orange-900`}>Instructions</h1>
 
         <ol>
           <li>
@@ -88,7 +91,7 @@ export default function Page() {
       </section>
 
       <section>
-        <h1>Nutrition</h1>
+        <h1 className={`${figtree.className} text-3xl text-orange-900`}>Nutrition</h1>
 
         <p>
           The table below shows nutritional values per serving without the
