@@ -10,7 +10,7 @@ export default function Page() {
   const basePath = "/recipe-page-main";
 
   return (
-    <main className="mx-auto max-w-2xl rounded-3xl bg-white p-10">
+    <main className="mx-auto max-w-2xl rounded-3xl bg-white p-10 text-gray-600 my-28">
       <div>
         <Image
           src={`${basePath}/image-omelette.jpeg`}
@@ -21,27 +21,41 @@ export default function Page() {
         />
       </div>
       <section>
-        <h1 className={`${figtree.className} py-3 text-4xl`}>
+        <h1 className={`${figtree.className} py-5 text-4xl text-black`}>
           Simple Omelette Recipe
         </h1>
 
-        <p className="text-gray-600">
+        <p>
           An easy and quick dish, perfect for any meal. This classic omelette
           combines beaten eggs cooked to perfection, optionally filled with your
           choice of cheese, vegetables, or meats.
         </p>
 
-        <div>
-          <p>Preparation time</p>
-          <ul>
-            Total: Approximately 10 minutes Preparation: 5 minutes Cooking: 5
-            minutes
+        <div className="rounded-lg bg-pink-50 p-5 my-4">
+          <p className="text-lg font-semibold text-pink-800 mb-2">
+            Preparation time
+          </p>
+          <ul className="flex flex-col gap-2">
+            <li>
+              <span className="mr-4">・</span>
+              <span className="font-bold">Total</span>: Approximately 10 minutes
+            </li>
+            <li>
+              <span className="mr-4">・</span>
+              <span className="font-bold">Preparation</span>: 5 minutes
+            </li>
+            <li>
+              <span className="mr-4">・</span>
+              <span className="font-bold">Cooking</span>: 5 minutes
+            </li>
           </ul>
         </div>
       </section>
 
       <section>
-        <h1 className={`${figtree.className} text-3xl text-orange-900`}>Ingredients</h1>
+        <h1 className={`${figtree.className} text-3xl text-orange-900 py-3`}>
+          Ingredients
+        </h1>
 
         <ul>
           <li>2-3 large eggs</li>
@@ -55,9 +69,11 @@ export default function Page() {
       </section>
 
       <section>
-        <h1 className={`${figtree.className} text-3xl text-orange-900`}>Instructions</h1>
+        <h1 className={`${figtree.className} text-3xl text-orange-900 py-3`}>
+          Instructions
+        </h1>
 
-        <ol>
+        <ol className="list-inside list-decimal marker:font-bold marker:text-orange-900">
           <li>
             Beat the eggs: In a bowl, beat the eggs with a pinch of salt and
             pepper until they are well mixed. You can add a tablespoon of water
@@ -91,7 +107,9 @@ export default function Page() {
       </section>
 
       <section>
-        <h1 className={`${figtree.className} text-3xl text-orange-900`}>Nutrition</h1>
+        <h1 className={`${figtree.className} text-3xl text-orange-900 py-3`}>
+          Nutrition
+        </h1>
 
         <p>
           The table below shows nutritional values per serving without the
@@ -99,13 +117,21 @@ export default function Page() {
         </p>
 
         <ul>
-          <li>Calories 277kcal</li>
+          <li>
+            Calories <span className="font-bold text-orange-900">277kcal</span>
+          </li>
 
-          <li>Carbs 0g</li>
+          <li>
+            Carbs <span className="font-bold text-orange-900">0g</span>
+          </li>
 
-          <li>Protein 20g</li>
+          <li>
+            Protein <span className="font-bold text-orange-900">20g</span>
+          </li>
 
-          <li>Fat 22g</li>
+          <li>
+            Fat <span className="font-bold text-orange-900">22g</span>
+          </li>
         </ul>
       </section>
     </main>
