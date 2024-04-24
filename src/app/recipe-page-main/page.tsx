@@ -10,7 +10,7 @@ export default function Page() {
   const basePath = "/recipe-page-main";
 
   return (
-    <main className="mx-auto max-w-2xl rounded-3xl bg-white p-10 text-gray-600 my-28">
+    <main className="mx-auto my-28 max-w-2xl rounded-3xl bg-white p-10 text-gray-600">
       <div>
         <Image
           src={`${basePath}/image-omelette.jpeg`}
@@ -31,21 +31,21 @@ export default function Page() {
           choice of cheese, vegetables, or meats.
         </p>
 
-        <div className="rounded-lg bg-pink-50 p-5 my-4">
-          <p className="text-lg font-semibold text-pink-800 mb-2">
+        <div className="my-4 rounded-lg bg-pink-50 p-5">
+          <p className="mb-2 text-lg font-semibold text-pink-800">
             Preparation time
           </p>
           <ul className="flex flex-col gap-2">
             <li>
-              <span className="mr-4">・</span>
+              <span className="mr-5 font-bold text-pink-800">・</span>
               <span className="font-bold">Total</span>: Approximately 10 minutes
             </li>
             <li>
-              <span className="mr-4">・</span>
+              <span className="mr-5 font-bold text-pink-800">・</span>
               <span className="font-bold">Preparation</span>: 5 minutes
             </li>
             <li>
-              <span className="mr-4">・</span>
+              <span className="mr-5 font-bold text-pink-800">・</span>
               <span className="font-bold">Cooking</span>: 5 minutes
             </li>
           </ul>
@@ -53,23 +53,36 @@ export default function Page() {
       </section>
 
       <section>
-        <h1 className={`${figtree.className} text-3xl text-orange-900 py-3`}>
+        <h1 className={`${figtree.className} py-3 text-3xl text-orange-900`}>
           Ingredients
         </h1>
 
-        <ul>
-          <li>2-3 large eggs</li>
-          <li>Salt, to taste</li>
-          <li>Pepper, to taste</li>
-          <li>1 tablespoon of butter or oil</li>
+        <ul className="flex flex-col gap-2">
           <li>
+            <span className="ml-1 mr-6 font-bold text-orange-900">・</span>2-3
+            large eggs
+          </li>
+          <li>
+            <span className="ml-1 mr-6 font-bold text-orange-900">・</span>Salt,
+            to taste
+          </li>
+          <li>
+            <span className="ml-1 mr-6 font-bold text-orange-900">・</span>
+            Pepper, to taste
+          </li>
+          <li>
+            <span className="ml-1 mr-6 font-bold text-orange-900">・</span>1
+            tablespoon of butter or oil
+          </li>
+          <li>
+            <span className="ml-1 mr-6 font-bold text-orange-900">・</span>
             Optional fillings: cheese, diced vegetables, cooked meats, herbs
           </li>
         </ul>
       </section>
 
       <section>
-        <h1 className={`${figtree.className} text-3xl text-orange-900 py-3`}>
+        <h1 className={`${figtree.className} py-3 text-3xl text-orange-900`}>
           Instructions
         </h1>
 
@@ -107,7 +120,7 @@ export default function Page() {
       </section>
 
       <section>
-        <h1 className={`${figtree.className} text-3xl text-orange-900 py-3`}>
+        <h1 className={`${figtree.className} py-3 text-3xl text-orange-900`}>
           Nutrition
         </h1>
 
