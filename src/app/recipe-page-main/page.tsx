@@ -10,7 +10,7 @@ export default function Page() {
   const basePath = "/recipe-page-main";
 
   return (
-    <main className="mx-auto my-28 max-w-2xl rounded-3xl bg-white p-10 text-gray-600">
+    <main className="mx-auto my-28 w-[45rem] rounded-3xl bg-white p-10 text-gray-600">
       <div>
         <Image
           src={`${basePath}/image-omelette.jpeg`}
@@ -86,36 +86,73 @@ export default function Page() {
           Instructions
         </h1>
 
-        <ol className="list-inside list-decimal marker:font-bold marker:text-orange-900">
-          <li>
-            Beat the eggs: In a bowl, beat the eggs with a pinch of salt and
-            pepper until they are well mixed. You can add a tablespoon of water
-            or milk for a fluffier texture.
+        <ol className="flex flex-col gap-2">
+          <li className="flex flex-row">
+            <span className="ml-1 mr-6 text-lg font-bold text-orange-900">
+              1.
+            </span>
+            <div>
+              <span className="font-bold">Beat the eggs</span>: In a bowl, beat
+              the eggs with a pinch of salt and pepper until they are well
+              mixed. You can add a tablespoon of water or milk for a fluffier
+              texture.
+            </div>
           </li>
 
-          <li>
-            Heat the pan: Place a non-stick frying pan over medium heat and add
-            butter or oil.
+          <li className="flex flex-row">
+            <span className="ml-1 mr-6 text-lg font-bold text-orange-900">
+              2.
+            </span>
+            <div>
+              <span className="font-bold">Heat the pan</span>: Place a non-stick
+              frying pan over medium heat and add butter or oil.
+            </div>
           </li>
 
-          <li>
-            Cook the omelette: Once the butter is melted and bubbling, pour in
-            the eggs. Tilt the pan to ensure the eggs evenly coat the surface.
+          <li className="flex flex-row">
+            <span className="ml-1 mr-6 text-lg font-bold text-orange-900">
+              3.
+            </span>
+            <div>
+              <span className="font-bold">Cook the omelette</span>: Once the
+              butter is melted and bubbling, pour in the eggs. Tilt the pan to
+              ensure the eggs evenly coat the surface.
+            </div>
           </li>
 
-          <li>
-            Add fillings (optional): When the eggs begin to set at the edges but
-            are still slightly runny in the middle, sprinkle your chosen
-            fillings over one half of the omelette.
+          <li className="flex flex-row">
+            <span className="ml-1 mr-6 text-lg font-bold text-orange-900">
+              4.
+            </span>
+            <div>
+              <span className="font-bold">Add fillings (optional)</span>: When
+              the eggs begin to set at the edges but are still slightly runny in
+              the middle, sprinkle your chosen fillings over one half of the
+              omelette.
+            </div>
           </li>
 
-          <li>
-            Fold and serve: As the omelette continues to cook, carefully lift
-            one edge and fold it over the fillings. Let it cook for another
-            minute, then slide it onto a plate.
+          <li className="flex flex-row">
+            <span className="ml-1 mr-6 text-lg font-bold text-orange-900">
+              5.
+            </span>
+            <div>
+              <span className="font-bold">Fold and serve</span>: As the omelette
+              continues to cook, carefully lift one edge and fold it over the
+              fillings. Let it cook for another minute, then slide it onto a
+              plate.
+            </div>
           </li>
 
-          <li>Enjoy: Serve hot, with additional salt and pepper if needed.</li>
+          <li className="flex flex-row">
+            <span className=" ml-1 mr-6 text-lg font-bold text-orange-900">
+              6.
+            </span>
+            <div>
+              <span className="font-bold">Enjoy</span>: Serve hot, with
+              additional salt and pepper if needed.
+            </div>
+          </li>
         </ol>
       </section>
 
