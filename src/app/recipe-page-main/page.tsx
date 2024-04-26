@@ -21,11 +21,11 @@ export default function Page() {
         />
       </div>
       <section>
-        <h1 className={`${figtree.className} py-5 text-4xl text-black`}>
+        <h1 className={`${figtree.className} my-6 text-4xl text-black`}>
           Simple Omelette Recipe
         </h1>
 
-        <p>
+        <p className="my-6">
           An easy and quick dish, perfect for any meal. This classic omelette
           combines beaten eggs cooked to perfection, optionally filled with your
           choice of cheese, vegetables, or meats.
@@ -52,7 +52,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="border-b border-gray-200">
+      <section className="border-b border-gray-200 pb-6">
         <h1 className={`${figtree.className} py-3 text-3xl text-orange-900`}>
           Ingredients
         </h1>
@@ -81,7 +81,7 @@ export default function Page() {
         </ul>
       </section>
 
-      <section className="border-b border-gray-200">
+      <section className="border-b border-gray-200 py-6">
         <h1 className={`${figtree.className} py-3 text-3xl text-orange-900`}>
           Instructions
         </h1>
@@ -156,7 +156,7 @@ export default function Page() {
         </ol>
       </section>
 
-      <section>
+      <section className="pt-3">
         <h1 className={`${figtree.className} py-3 text-3xl text-orange-900`}>
           Nutrition
         </h1>
@@ -167,22 +167,22 @@ export default function Page() {
         </p>
 
         <ul className="mt-3">
-          <li className="py-2 grid grid-cols-2 border-b border-gray-200">
+          <li className="grid grid-cols-2 border-b border-gray-200 py-2">
             <div className="ml-8">Calories</div>
             <span className="font-bold text-orange-900">277kcal</span>
           </li>
 
-          <li className="py-2 grid grid-cols-2 border-b border-gray-200">
+          <li className="grid grid-cols-2 border-b border-gray-200 py-2">
             <div className="ml-8">Carbs</div>
             <span className="font-bold text-orange-900">0g</span>
           </li>
 
-          <li className="py-2 grid grid-cols-2 border-b border-gray-200">
+          <li className="grid grid-cols-2 border-b border-gray-200 py-2">
             <div className="ml-8">Protein</div>
             <span className="font-bold text-orange-900">20g</span>
           </li>
 
-          <li className="py-2 grid grid-cols-2">
+          <li className="grid grid-cols-2 py-2">
             <div className="ml-8">Fat</div>
             <span className="font-bold text-orange-900">22g</span>
           </li>
