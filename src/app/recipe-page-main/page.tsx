@@ -52,7 +52,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section>
+      <section className="border-b border-gray-200">
         <h1 className={`${figtree.className} py-3 text-3xl text-orange-900`}>
           Ingredients
         </h1>
@@ -81,7 +81,7 @@ export default function Page() {
         </ul>
       </section>
 
-      <section>
+      <section className="border-b border-gray-200">
         <h1 className={`${figtree.className} py-3 text-3xl text-orange-900`}>
           Instructions
         </h1>
