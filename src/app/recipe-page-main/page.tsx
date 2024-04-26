@@ -166,21 +166,25 @@ export default function Page() {
           additional fillings.
         </p>
 
-        <ul>
-          <li>
-            Calories <span className="font-bold text-orange-900">277kcal</span>
+        <ul className="mt-3">
+          <li className="py-2 grid grid-cols-2 border-b border-gray-200">
+            <div className="ml-8">Calories</div>
+            <span className="font-bold text-orange-900">277kcal</span>
           </li>
 
-          <li>
-            Carbs <span className="font-bold text-orange-900">0g</span>
+          <li className="py-2 grid grid-cols-2 border-b border-gray-200">
+            <div className="ml-8">Carbs</div>
+            <span className="font-bold text-orange-900">0g</span>
           </li>
 
-          <li>
-            Protein <span className="font-bold text-orange-900">20g</span>
+          <li className="py-2 grid grid-cols-2 border-b border-gray-200">
+            <div className="ml-8">Protein</div>
+            <span className="font-bold text-orange-900">20g</span>
           </li>
 
-          <li>
-            Fat <span className="font-bold text-orange-900">22g</span>
+          <li className="py-2 grid grid-cols-2">
+            <div className="ml-8">Fat</div>
+            <span className="font-bold text-orange-900">22g</span>
           </li>
         </ul>
       </section>
