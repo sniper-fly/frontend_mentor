@@ -19,6 +19,11 @@ Users should be able to:
 
 - Live Site URL: [Add live site URL here]()
 
+### What I learned
+#### What are you most proud of, and what would you do differently next time?
+#### What challenges did you encounter, and how did you overcome them?
+#### What specific areas of your project would you like help with?
+
 ### Built with
 
 - Semantic HTML5 markup
