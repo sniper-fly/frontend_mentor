@@ -61,23 +61,23 @@ export default function Page() {
           </h1>
 
           <ul className="flex flex-col gap-2">
-            <li>
+            <li className="flex flex-row items-center">
               <span className="ml-1 mr-6 font-bold text-orange-900">・</span>2-3
               large eggs
             </li>
-            <li>
+            <li className="flex flex-row items-center">
               <span className="ml-1 mr-6 font-bold text-orange-900">・</span>
               Salt, to taste
             </li>
-            <li>
+            <li className="flex flex-row items-center">
               <span className="ml-1 mr-6 font-bold text-orange-900">・</span>
               Pepper, to taste
             </li>
-            <li>
+            <li className="flex flex-row items-center">
               <span className="ml-1 mr-6 font-bold text-orange-900">・</span>1
               tablespoon of butter or oil
             </li>
-            <li>
+            <li className="flex flex-row items-center">
               <span className="ml-1 mr-6 font-bold text-orange-900">・</span>
               Optional fillings: cheese, diced vegetables, cooked meats, herbs
             </li>
