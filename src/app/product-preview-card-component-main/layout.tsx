@@ -8,7 +8,7 @@ const montserrat = Montserrat({
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <body className={`${montserrat.className}`}>
+    <body className={`${montserrat.className} bg-[color:hsl(30,38%,92%)]`}>
       {children}
     </body>
   );
