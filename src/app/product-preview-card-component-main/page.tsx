@@ -32,15 +32,17 @@ export default function Page() {
             <br />
             De Parfum
           </h1>
-          <section>
-            <p className="text-sm leading-relaxed">
-              A floral, solar and voluptuous interpretation composed by Olivier
-              Polge, Perfumer-Creator for the House of CHANEL.
-            </p>
+          <p className="text-sm leading-relaxed">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <section className="my-5 flex flex-row items-center space-x-4">
+            <h1 className={`${fraunces.className} text-3xl text-teal-700`}>
+              $149.99
+            </h1>
+            <h2 className="text-sm line-through">$169.99</h2>
           </section>
-          <h1 className={`${fraunces.className} text-teal-700`}>$149.99</h1>
-          <h2>$169.99</h2>
-          <button className="rounded-lg bg-teal-700 text-white">
+          <button className="flex w-full flex-row justify-center items-center rounded-lg bg-teal-700 py-3 text-white">
             <Image
               src={`${basePath}/icon-cart.svg`}
               alt="icon-cart"
@@ -48,7 +50,7 @@ export default function Page() {
               height={15}
               className="mr-2"
             />
-            Add to Cart
+            <p className="text-sm font-semibold">Add to Cart</p>
           </button>
         </article>
       </main>
