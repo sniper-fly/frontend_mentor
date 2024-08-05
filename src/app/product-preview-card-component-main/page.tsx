@@ -22,14 +22,18 @@ export default function Page() {
         />
         {/* 文章とボタンの配置 */}
         <article className="w-1/2 rounded-r-2xl bg-white p-8 text-gray-500">
-          <h2>PERFUME</h2>
-          <h1 className={`${fraunces.className} text-black`}>
-            <div>Gabrielle</div>
-            <div>Essence Eau</div>
-            <div>De Parfum</div>
+          <h2 className="text-xs tracking-[0.4em]">PERFUME</h2>
+          <h1
+            className={`${fraunces.className} my-5 text-3xl leading-8 text-black`}
+          >
+            Gabrielle
+            <br />
+            Essence Eau
+            <br />
+            De Parfum
           </h1>
           <section>
-            <p>
+            <p className="text-sm leading-relaxed">
               A floral, solar and voluptuous interpretation composed by Olivier
               Polge, Perfumer-Creator for the House of CHANEL.
             </p>
