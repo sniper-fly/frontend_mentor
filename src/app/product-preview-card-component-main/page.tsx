@@ -37,12 +37,12 @@ export default function Page() {
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
           <section className="my-5 flex flex-row items-center space-x-4">
-            <h1 className={`${fraunces.className} text-3xl text-teal-700`}>
+            <h1 className={`${fraunces.className} text-3xl text-emerald-700`}>
               $149.99
             </h1>
             <h2 className="text-sm line-through">$169.99</h2>
           </section>
-          <button className="flex w-full flex-row justify-center items-center rounded-lg bg-teal-700 py-3 text-white">
+          <button className="flex w-full flex-row items-center justify-center rounded-lg bg-emerald-700 py-3 text-white transition duration-100 hover:bg-emerald-900">
             <Image
               src={`${basePath}/icon-cart.svg`}
               alt="icon-cart"
