@@ -34,12 +34,10 @@ export default function Page() {
         <article className="rounded-b-2xl bg-white p-6 text-gray-500 sm:w-1/2 sm:rounded-r-2xl">
           <h2 className="text-xs tracking-[0.4em]">PERFUME</h2>
           <h1
-            className={`${fraunces.className} my-5 text-3xl leading-8 text-black`}
+            className={`${fraunces.className} my-5 text-3xl sm:max-w-52 leading-8 text-black`}
           >
             Gabrielle
-            <br />
             Essence Eau
-            <br />
             De Parfum
           </h1>
           <p className="text-sm leading-relaxed">
