@@ -10,18 +10,28 @@ export default function Page() {
   const basePath = "/product-preview-card-component-main";
 
   return (
-    <div className="flex h-screen items-center justify-center">
-      <main className="flex max-w-xl flex-row">
-        {/* 画像を半分配置 */}
+    <div className="flex h-screen items-center justify-center px-4">
+      <main className="flex max-w-xl flex-col sm:flex-row">
+        {/* sm以上で表示 */}
         <Image
           src={`${basePath}/image-product-desktop.jpg`}
           alt="image-product-desktop"
           width={600}
           height={900}
-          className="w-1/2 rounded-l-2xl"
+          className="hidden w-1/2 rounded-l-2xl sm:block"
         />
+
+        {/* sm 以下で表示 */}
+        <Image
+          src={`${basePath}/image-product-mobile.jpg`}
+          alt="image-product-desktop"
+          width={600}
+          height={900}
+          className="block rounded-t-2xl sm:hidden"
+        />
+
         {/* 文章とボタンの配置 */}
-        <article className="w-1/2 rounded-r-2xl bg-white p-8 text-gray-500">
+        <article className="rounded-b-2xl bg-white p-6 text-gray-500 sm:w-1/2 sm:rounded-r-2xl">
           <h2 className="text-xs tracking-[0.4em]">PERFUME</h2>
           <h1
             className={`${fraunces.className} my-5 text-3xl leading-8 text-black`}
