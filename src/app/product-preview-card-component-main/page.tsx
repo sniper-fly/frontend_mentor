@@ -11,14 +11,14 @@ export default function Page() {
 
   return (
     <div className="flex h-screen items-center justify-center px-4">
-      <main className="flex max-w-xl flex-col sm:flex-row">
+      <main className="flex max-w-xl flex-col overflow-hidden rounded-2xl sm:flex-row">
         {/* sm以上で表示 */}
         <Image
           src={`${basePath}/image-product-desktop.jpg`}
           alt="image-product-desktop"
           width={600}
           height={900}
-          className="hidden w-1/2 rounded-l-2xl sm:block"
+          className="hidden w-1/2 sm:block"
         />
 
         {/* sm 以下で表示 */}
@@ -27,18 +27,16 @@ export default function Page() {
           alt="image-product-desktop"
           width={600}
           height={900}
-          className="block rounded-t-2xl sm:hidden"
+          className="block sm:hidden"
         />
 
         {/* 文章とボタンの配置 */}
-        <article className="rounded-b-2xl bg-white p-6 text-gray-500 sm:w-1/2 sm:rounded-r-2xl">
+        <article className=" bg-white p-6 text-gray-500 sm:w-1/2 ">
           <h2 className="text-xs tracking-[0.4em]">PERFUME</h2>
           <h1
-            className={`${fraunces.className} my-5 text-3xl sm:max-w-52 leading-8 text-black`}
+            className={`${fraunces.className} my-5 text-3xl leading-8 text-black sm:max-w-52`}
           >
-            Gabrielle
-            Essence Eau
-            De Parfum
+            Gabrielle Essence Eau De Parfum
           </h1>
           <p className="text-sm leading-relaxed">
             A floral, solar and voluptuous interpretation composed by Olivier
