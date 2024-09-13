@@ -1,23 +1,46 @@
 import { Poppins } from "next/font/google";
 
-const poppins = Poppins({
-  weight: ["200", "400", "600"],
-  subsets: ["latin"],
-});
-
 export default function Page() {
+  const poppins = Poppins({
+    weight: ["200", "400", "600"],
+    subsets: ["latin"],
+  });
+  const basePath = "/four-card-feature-section-master";
+  // カードの内容を配列で持ち、mapで回すようにしてもいいかもしれない
+
   return (
     <body className={`${poppins.className}`}>
-      <div>
-        <h1>Reliable, efficient delivery</h1>
-        <h1>Powered by Technology</h1>
-        <p>
-          Our Artificial Intelligence powered tools use millions of project data
-          points to ensure that your project is successful
-        </p>
-      </div>
+      <main>
+        <div>
+          <h1>Reliable, efficient delivery</h1>
+          <h1>Powered by Technology</h1>
+          <p>
+            Our Artificial Intelligence powered tools use millions of project
+            data points to ensure that your project is successful
+          </p>
+        </div>
+        <div>
+          <Card
+            title="Supervisor"
+            description="Monitors activity to identify project roadblocks"
+            color="hsl(180, 62%, 55%)"
+            logoUrl={`${basePath}/icon-supervisor`}
+          />
+        </div>
+      </main>
     </body>
   );
+}
+
+type Props = {
+  className?: string;
+  title: string;
+  description: string;
+  color: string;
+  logoUrl: string;
+};
+function Card({ className, title, description, color, logoUrl }: Props) {
+  return <div className={`${className}`}></div>;
 }
 
 `
