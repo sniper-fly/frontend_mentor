@@ -1,10 +1,11 @@
 import { Poppins } from "next/font/google";
 
+const poppins = Poppins({
+  weight: ["200", "400", "600"],
+  subsets: ["latin"],
+});
+
 export default function Page() {
-  const poppins = Poppins({
-    weight: ["200", "400", "600"],
-    subsets: ["latin"],
-  });
   const basePath = "/four-card-feature-section-master";
   // カードの内容を配列で持ち、mapで回すようにしてもいいかもしれない
 
