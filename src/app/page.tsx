@@ -32,6 +32,11 @@ export default function Home() {
           product-preview-card-component-main
         </Link>
       </Card>
+      <Card>
+        <Link href="four-card-feature-section-master">
+          four-card-feature-section-master
+        </Link>
+      </Card>
     </div>
   );
 }
