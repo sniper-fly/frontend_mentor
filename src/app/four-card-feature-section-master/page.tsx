@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import Image from "next/image";
 
 const poppins = Poppins({
   weight: ["200", "400", "600"],
@@ -42,7 +43,7 @@ export default function Page() {
       className={`${poppins.className} bg-[color:hsl(0,0%,98%)]
       text-[color:hsl(229,6%,66%)]`}
     >
-      <main className="flex justify-center py-14">
+      <main className="flex flex-col items-center py-14">
         <div className="max-w-xl text-center">
           <div
             className="my-5 space-y-3 text-4xl
@@ -61,7 +62,7 @@ export default function Page() {
             title="Supervisor"
             description="Monitors activity to identify project roadblocks"
             bgColorClass="bg-red-800"
-            logoUrl={`${basePath}/icon-supervisor`}
+            logoUrl={`${basePath}/icon-supervisor.svg`}
           />
         </div>
       </main>
@@ -77,5 +78,11 @@ type Props = {
   logoUrl: string;
 };
 function Card({ className, title, description, bgColorClass, logoUrl }: Props) {
-  return <div className={`${className}`}></div>;
+  return (
+    <div className={`${className}`}>
+      <h1 className="text-[color:hsl(234,12%,34%)]">{title}</h1>
+      <p>{description}</p>
+      <Image src={logoUrl} alt={title} width={70} height={70} />
+    </div>
+  );
 }
