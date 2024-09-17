@@ -38,11 +38,19 @@ export default function Page() {
   ];
 
   return (
-    <body className={`${poppins.className}`}>
-      <main>
-        <div>
-          <h1>Reliable, efficient delivery</h1>
-          <h1>Powered by Technology</h1>
+    <body
+      className={`${poppins.className} bg-[color:hsl(0,0%,98%)]
+      text-[color:hsl(229,6%,66%)]`}
+    >
+      <main className="flex justify-center py-14">
+        <div className="max-w-xl text-center">
+          <div
+            className="my-5 space-y-3 text-4xl
+            text-[color:hsl(234,12%,34%)]"
+          >
+            <h1 className="font-extralight">Reliable, efficient delivery</h1>
+            <h1 className="font-semibold">Powered by Technology</h1>
+          </div>
           <p>
             Our Artificial Intelligence powered tools use millions of project
             data points to ensure that your project is successful
