@@ -8,6 +8,34 @@ const poppins = Poppins({
 export default function Page() {
   const basePath = "/four-card-feature-section-master";
   // カードの内容を配列で持ち、mapで回すようにしてもいいかもしれない
+  const cards = [
+    {
+      title: "Supervisor",
+      description: "Monitors activity to identify project roadblocks",
+      bgColorClass: "bg-teal-500",
+      logoUrl: `${basePath}/icon-supervisor.svg`,
+    },
+    {
+      title: "Team Builder",
+      description:
+        "Scans our talent network to create the optimal team for your project",
+      bgColorClass: "bg-red-800",
+      logoUrl: `${basePath}/icon-team-builder.svg`,
+    },
+    {
+      title: "Karma",
+      description: "Regularly evaluates our talent to ensure quality",
+      bgColorClass: "bg-yellow-600",
+      logoUrl: `${basePath}/icon-karma.svg`,
+    },
+    {
+      title: "Calculator",
+      description:
+        "Uses data from past projects to provide better delivery estimates",
+      bgColorClass: "bg-blue-800",
+      logoUrl: `${basePath}/icon-calculator.svg`,
+    },
+  ];
 
   return (
     <body className={`${poppins.className}`}>
@@ -24,7 +52,7 @@ export default function Page() {
           <Card
             title="Supervisor"
             description="Monitors activity to identify project roadblocks"
-            color="hsl(180, 62%, 55%)"
+            bgColorClass="bg-red-800"
             logoUrl={`${basePath}/icon-supervisor`}
           />
         </div>
@@ -37,23 +65,9 @@ type Props = {
   className?: string;
   title: string;
   description: string;
-  color: string;
+  bgColorClass: string;
   logoUrl: string;
 };
-function Card({ className, title, description, color, logoUrl }: Props) {
+function Card({ className, title, description, bgColorClass, logoUrl }: Props) {
   return <div className={`${className}`}></div>;
 }
-
-`
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-`;
