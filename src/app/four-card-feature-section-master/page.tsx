@@ -57,13 +57,39 @@ export default function Page() {
             data points to ensure that your project is successful
           </p>
         </div>
-        <div>
+        <div className="grid grid-flow-col grid-rows-4 gap-4 p-3">
+          <div className="grid grid-rows-subgrid gap-4 row-span-4">
+            <Card
+              className="row-start-2 row-end-4"
+              title={cards[0].title}
+              description={cards[0].description}
+              bgColorClass={cards[0].bgColorClass}
+              logoUrl={cards[0].logoUrl}
+            />
+          </div>
           <Card
-            title="Supervisor"
-            description="Monitors activity to identify project roadblocks"
-            bgColorClass="bg-red-800"
-            logoUrl={`${basePath}/icon-supervisor.svg`}
+            className="row-start-1 row-end-3"
+            title={cards[1].title}
+            description={cards[1].description}
+            bgColorClass={cards[1].bgColorClass}
+            logoUrl={cards[1].logoUrl}
           />
+          <Card
+            className="row-start-3 row-end-5"
+            title={cards[2].title}
+            description={cards[2].description}
+            bgColorClass={cards[2].bgColorClass}
+            logoUrl={cards[2].logoUrl}
+          />
+          <div className="grid grid-rows-subgrid gap-4 row-span-4">
+            <Card
+              className="row-start-2 row-end-4"
+              title={cards[3].title}
+              description={cards[3].description}
+              bgColorClass={cards[3].bgColorClass}
+              logoUrl={cards[3].logoUrl}
+            />
+          </div>
         </div>
       </main>
     </body>
@@ -79,7 +105,7 @@ type Props = {
 };
 function Card({ className, title, description, bgColorClass, logoUrl }: Props) {
   return (
-    <div className={`${className}`}>
+    <div className={`${className} rounded-lg bg-white p-5 shadow-md`}>
       <h1 className="text-[color:hsl(234,12%,34%)]">{title}</h1>
       <p>{description}</p>
       <Image src={logoUrl} alt={title} width={70} height={70} />
