@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import Image from "next/image";
+import styles from "./styles.module.css";
 
 const poppins = Poppins({
   weight: ["200", "400", "600"],
@@ -57,30 +58,33 @@ export default function Page() {
             data points to ensure that your project is successful
           </p>
         </div>
-        <div className="grid grid-flow-col grid-cols-3 grid-rows-4 gap-4 p-3">
+        <div
+          className={`grid grid-flow-col grid-cols-3 grid-rows-4 gap-4 p-3
+            ${styles.areas_card_large}`}
+        >
           <Card
-            className="row-start-2 row-end-4"
+            className="[grid-area:card1]"
             title={cards[0].title}
             description={cards[0].description}
             bgColorClass={cards[0].bgColorClass}
             logoUrl={cards[0].logoUrl}
           />
           <Card
-            className="row-start-1 row-end-3"
+            className="[grid-area:card2]"
             title={cards[1].title}
             description={cards[1].description}
             bgColorClass={cards[1].bgColorClass}
             logoUrl={cards[1].logoUrl}
           />
           <Card
-            className="row-start-3 row-end-5"
+            className="[grid-area:card3]"
             title={cards[2].title}
             description={cards[2].description}
             bgColorClass={cards[2].bgColorClass}
             logoUrl={cards[2].logoUrl}
           />
           <Card
-            className="row-start-2 row-end-4"
+            className="[grid-area:card4]"
             title={cards[3].title}
             description={cards[3].description}
             bgColorClass={cards[3].bgColorClass}

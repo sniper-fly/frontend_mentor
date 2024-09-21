@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+  .areas_card_large {
+    grid-template-areas:
+      "..... card2 ....."
+      "card1 card2 card4"
+      "card1 card3 card4"
+      "..... card3 .....";
+  }
+}
