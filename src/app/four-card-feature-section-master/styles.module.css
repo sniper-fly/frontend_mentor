@@ -1,9 +1,19 @@
 @media (min-width: 768px) {
-  .areas_card_large {
+  .areas_card_md {
     grid-template-areas:
       "..... card2 ....."
       "card1 card2 card4"
       "card1 card3 card4"
       "..... card3 .....";
+  }
+}
+
+@media (max-width: 768px) {
+  .areas_card_sm {
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4";
   }
 }

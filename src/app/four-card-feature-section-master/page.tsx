@@ -59,12 +59,12 @@ export default function Page() {
           </p>
         </div>
         <div
-          className={`grid grid-flow-col grid-cols-3 grid-rows-4 gap-4 p-3
-            ${styles.areas_card_large}`}
+          className={`grid grid-flow-col gap-4 p-3 md:grid-cols-3 md:grid-rows-4
+            ${styles.areas_card_md} ${styles.areas_card_sm}`}
         >
           {cards.map((card, idx) => (
             <Card
-              className={`[grid-area:card${idx + 1}]`}
+              style={{ gridArea: `card${idx + 1}` }}
               key={idx}
               title={card.title}
               description={card.description}
@@ -79,15 +79,26 @@ export default function Page() {
 }
 
 type Props = {
+  style?: Object;
   className?: string;
   title: string;
   description: string;
   bgColorClass: string;
   logoUrl: string;
 };
-function Card({ className, title, description, bgColorClass, logoUrl }: Props) {
+function Card({
+  style,
+  className,
+  title,
+  description,
+  bgColorClass,
+  logoUrl,
+}: Props) {
   return (
-    <div className={`${className} rounded-lg bg-white p-5 shadow-md`}>
+    <div
+      className={`${className} rounded-lg bg-white p-5 shadow-md`}
+      style={style}
+    >
       <h1 className="text-[color:hsl(234,12%,34%)]">{title}</h1>
       <p>{description}</p>
       <Image src={logoUrl} alt={title} width={70} height={70} />
