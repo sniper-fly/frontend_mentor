@@ -14,27 +14,27 @@ export default function Page() {
     {
       title: "Supervisor",
       description: "Monitors activity to identify project roadblocks",
-      bgColorClass: "bg-teal-500",
+      bgColorClass: "bg-teal-400",
       logoUrl: `${basePath}/icon-supervisor.svg`,
     },
     {
       title: "Team Builder",
       description:
         "Scans our talent network to create the optimal team for your project",
-      bgColorClass: "bg-red-800",
+      bgColorClass: "bg-red-600",
       logoUrl: `${basePath}/icon-team-builder.svg`,
     },
     {
       title: "Karma",
       description: "Regularly evaluates our talent to ensure quality",
-      bgColorClass: "bg-yellow-600",
+      bgColorClass: "bg-amber-500",
       logoUrl: `${basePath}/icon-karma.svg`,
     },
     {
       title: "Calculator",
       description:
         "Uses data from past projects to provide better delivery estimates",
-      bgColorClass: "bg-blue-800",
+      bgColorClass: "bg-sky-600",
       logoUrl: `${basePath}/icon-calculator.svg`,
     },
   ];
@@ -96,12 +96,15 @@ function Card({
 }: Props) {
   return (
     <div
-      className={`${className} rounded-lg bg-white p-5 shadow-md`}
+      className={`${className} overflow-hidden rounded-lg bg-white shadow-md`}
       style={style}
     >
-      <h1 className="text-[color:hsl(234,12%,34%)]">{title}</h1>
-      <p>{description}</p>
-      <Image src={logoUrl} alt={title} width={70} height={70} />
+      <div className={`${bgColorClass} h-1`} />
+      <div className="p-5">
+        <h1 className="font-semibold text-[color:hsl(234,12%,34%)]">{title}</h1>
+        <p>{description}</p>
+        <Image src={logoUrl} alt={title} width={70} height={70} />
+      </div>
     </div>
   );
 }
