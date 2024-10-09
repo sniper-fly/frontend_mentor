@@ -100,10 +100,12 @@ function Card({
       style={style}
     >
       <div className={`${bgColorClass} h-1`} />
-      <div className="p-5">
+      <div className="p-7">
         <h1 className="font-semibold text-[color:hsl(234,12%,34%)]">{title}</h1>
         <p>{description}</p>
-        <Image src={logoUrl} alt={title} width={70} height={70} />
+        <div className="grid justify-items-end">
+          <Image src={logoUrl} alt={title} width={70} height={70} />
+        </div>
       </div>
     </div>
   );
