@@ -44,12 +44,9 @@ export default function Page() {
       className={`${poppins.className} bg-[color:hsl(0,0%,98%)]
       text-[color:hsl(229,6%,66%)]`}
     >
-      <main className="flex flex-col items-center py-14">
+      <main className="flex flex-col items-center px-7 py-14">
         <div className="max-w-xl text-center">
-          <div
-            className="my-5 space-y-3 text-4xl
-            text-[color:hsl(234,12%,34%)]"
-          >
+          <div className="my-5 space-y-3 text-2xl text-[color:hsl(234,12%,34%)] md:text-4xl">
             <h1 className="font-extralight">Reliable, efficient delivery</h1>
             <h1 className="font-semibold">Powered by Technology</h1>
           </div>
@@ -59,11 +56,12 @@ export default function Page() {
           </p>
         </div>
         <div
-          className={`grid grid-flow-col gap-4 p-3 md:grid-cols-3 md:grid-rows-4
+          className={`mt-16 grid grid-flow-col gap-6 md:grid-cols-3 md:grid-rows-4
             ${styles.areas_card_md} ${styles.areas_card_sm}`}
         >
           {cards.map((card, idx) => (
             <Card
+              className="max-w-sm"
               style={{ gridArea: `card${idx + 1}` }}
               key={idx}
               title={card.title}
@@ -101,9 +99,11 @@ function Card({
     >
       <div className={`${bgColorClass} h-1`} />
       <div className="p-7">
-        <h1 className="font-semibold text-[color:hsl(234,12%,34%)]">{title}</h1>
+        <h1 className="mb-3 text-2xl font-semibold text-[color:hsl(234,12%,34%)]">
+          {title}
+        </h1>
         <p>{description}</p>
-        <div className="grid justify-items-end">
+        <div className="mt-8 grid justify-items-end">
           <Image src={logoUrl} alt={title} width={70} height={70} />
         </div>
       </div>
