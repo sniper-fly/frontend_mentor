@@ -1,42 +1,40 @@
 import Link from "next/link";
-import { ReactNode } from "react";
+import Image from "next/image";
 
-function Card({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+function Card({ className, title }: { className?: string; title: string }) {
   return (
-    <div className={`m-3 bg-black p-2 text-white ${className}`}>{children}</div>
+    <Link href={`/${title}`}>
+      <div
+        className={`${className} cursor-pointer overflow-hidden rounded-lg
+      bg-white transition-transform duration-200
+      hover:scale-105`}
+      >
+        <Image
+          src={`/${title}/desktop.png`}
+          alt={title}
+          width={1500}
+          height={1500}
+        />
+        <p className="text-center text-lg font-medium my-3">{title}</p>
+      </div>
+    </Link>
   );
 }
 
 export default function Home() {
+  const works = [
+    "four-card-feature-section-master",
+    "product-preview-card-component-main",
+    "base-apparel-coming-soon-master",
+    "blog-preview-card-main",
+    "recipe-page-main",
+  ];
+
   return (
-    <div className="flex flex-col items-center pt-10">
-      <Card>
-        <Link href="/recipe-page-main">recipe-page-main</Link>
-      </Card>
-      <Card>
-        <Link href="/blog-preview-card-main">blog-preview-card-main</Link>
-      </Card>
-      <Card>
-        <Link href="/base-apparel-coming-soon-master">
-          base-apparel-coming-soon-master
-        </Link>
-      </Card>
-      <Card>
-        <Link href="product-preview-card-component-main">
-          product-preview-card-component-main
-        </Link>
-      </Card>
-      <Card>
-        <Link href="four-card-feature-section-master">
-          four-card-feature-section-master
-        </Link>
-      </Card>
+    <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
+      {works.map((work) => (
+        <Card key={work} title={work} className="" />
+      ))}
     </div>
   );
 }
