@@ -6,7 +6,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Screenshot
 
-![](./desktop.png)
+![](../../../public/recipe-page-main/desktop.png)
 
 ### Links
 

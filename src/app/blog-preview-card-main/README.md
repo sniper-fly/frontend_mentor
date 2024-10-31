@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./desktop.png)
+![](../../../public/blog-preview-card-main//desktop.png)
 
 ### Links
 

@@ -21,7 +21,7 @@ Others:
 
 ### Screenshot
 
-![](./desktop.png)
+![](../../../public/base-apparel-coming-soon-master/desktop.png)
 
 ### Links
 

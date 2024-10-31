@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./desktop.png)
+![](../../../public/product-preview-card-component-main//desktop.png)
 
 ### Links
 

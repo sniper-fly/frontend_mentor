@@ -18,7 +18,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./desktop.png)
+![](../../../public/four-card-feature-section-master//desktop.png)
 
 ### Links
 
