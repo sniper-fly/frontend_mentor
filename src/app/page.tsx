@@ -5,8 +5,8 @@ function Card({ className, title }: { className?: string; title: string }) {
   return (
     <Link href={`/${title}`}>
       <div
-        className={`${className} cursor-pointer overflow-hidden rounded-lg
-      bg-white transition-transform duration-200
+        className={`${className} cursor-pointer overflow-hidden rounded-lg bg-white
+      shadow-md transition-transform duration-200
       hover:scale-105`}
       >
         <Image
@@ -15,7 +15,7 @@ function Card({ className, title }: { className?: string; title: string }) {
           width={1500}
           height={1500}
         />
-        <p className="text-center text-lg font-medium my-3">{title}</p>
+        <p className="my-3 text-center text-lg font-medium">{title}</p>
       </div>
     </Link>
   );
@@ -31,10 +31,33 @@ export default function Home() {
   ];
 
   return (
-    <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
-      {works.map((work) => (
-        <Card key={work} title={work} className="" />
-      ))}
-    </div>
+    <>
+      <header className="grid grid-cols-1 gap-5 border-b py-6 md:grid-cols-2">
+        <p className="text-center text-4xl font-bold">
+          sniper-fly's Frontend Mentor works
+        </p>
+        <div className="flex flex-row items-center justify-evenly text-xl">
+          <a
+            className="transition-colors duration-200 hover:text-blue-700"
+            href="https://github.com/sniper-fly/frontend_mentor"
+          >
+            Github Repository
+          </a>
+          <a
+            className="transition-colors duration-200 hover:text-blue-700"
+            href="https://www.frontendmentor.io/profile/sniper-fly"
+          >
+            Frontend Mentor Profile
+          </a>
+        </div>
+      </header>
+      <main className="container mx-auto my-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {works.map((work) => (
+            <Card key={work} title={work} className="" />
+          ))}
+        </div>
+      </main>
+    </>
   );
 }
