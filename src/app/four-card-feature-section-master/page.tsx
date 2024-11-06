@@ -40,7 +40,7 @@ export default function Page() {
   ];
 
   return (
-    <body
+    <div
       className={`${poppins.className} bg-[color:hsl(0,0%,98%)]
       text-[color:hsl(229,6%,66%)]`}
     >
@@ -72,7 +72,7 @@ export default function Page() {
           ))}
         </div>
       </main>
-    </body>
+    </div>
   );
 }
 

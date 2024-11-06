@@ -8,8 +8,8 @@ const outfit = Outfit({
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <body className={`${outfit.className} bg-[color:hsl(30,54%,90%)]`}>
+    <div className={`${outfit.className} bg-[color:hsl(30,54%,90%)]`}>
       {children}
-    </body>
+    </div>
   );
 }

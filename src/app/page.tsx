@@ -31,7 +31,7 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <div className="bg-gray-50">
       <header className="grid grid-cols-1 gap-5 border-b py-6 md:grid-cols-2">
         <p className="text-center text-4xl font-bold">
           sniper-fly's Frontend Mentor works
@@ -58,6 +58,6 @@ export default function Home() {
           ))}
         </div>
       </main>
-    </>
+    </div>
   );
 }
