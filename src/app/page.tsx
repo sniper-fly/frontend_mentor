@@ -34,7 +34,7 @@ export default function Home() {
     <div className="bg-gray-50">
       <header className="grid grid-cols-1 gap-5 border-b py-6 md:grid-cols-2">
         <p className="text-center text-4xl font-bold">
-          sniper-fly's Frontend Mentor works
+          sniper-fly&apos;s Frontend Mentor works
         </p>
         <div className="flex flex-row items-center justify-evenly text-xl">
           <a
