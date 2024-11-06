@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://frontend-mentor-three-ivory.vercel.app/blog-preview-card-main)
+- Live Site URL: [https://frontend-mentor-sniper-fly.vercel.app/blog-preview-card-main](https://frontend-mentor-sniper-fly.vercel.app/blog-preview-card-main)
 
 ### Built with
 

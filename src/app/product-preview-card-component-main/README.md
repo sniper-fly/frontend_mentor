@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://frontend-mentor-three-ivory.vercel.app/product-preview-card-component-main](https://frontend-mentor-three-ivory.vercel.app/product-preview-card-component-main)
+- Live Site URL: [https://frontend-mentor-sniper-fly.vercel.app/product-preview-card-component-main](https://frontend-mentor-sniper-fly.vercel.app/product-preview-card-component-main)
 
 ### What I learned
 

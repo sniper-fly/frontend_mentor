@@ -10,7 +10,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Live Site URL: [https://frontend-mentor-three-ivory.vercel.app/recipe-page-main](https://frontend-mentor-three-ivory.vercel.app/recipe-page-main)
+- Live Site URL: [https://frontend-mentor-sniper-fly.vercel.app/recipe-page-main](https://frontend-mentor-sniper-fly.vercel.app/recipe-page-main)
 
 ### What I learned
 #### What are you most proud of, and what would you do differently next time?
