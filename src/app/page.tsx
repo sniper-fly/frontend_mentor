@@ -13,7 +13,7 @@ function Card({ className, title }: { className?: string; title: string }) {
           src={`/${title}/desktop.png`}
           alt={title}
           width={1500}
-          height={1500}
+          height={850}
         />
         <p className="my-3 text-center text-lg font-medium">{title}</p>
       </div>
@@ -23,6 +23,7 @@ function Card({ className, title }: { className?: string; title: string }) {
 
 export default function Home() {
   const works = [
+    "testimonials-grid-section-main",
     "four-card-feature-section-master",
     "product-preview-card-component-main",
     "base-apparel-coming-soon-master",
