@@ -1,0 +1,16 @@
+@keyframes gradient-change {
+  0% {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+  }
+  50% {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+  }
+  100% {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+  }
+}
+
+.bg_gradient_animate {
+  @apply bg-gradient-to-r from-pink-500 to-yellow-500;
+  animation: gradient-change 10s ease infinite;
+}
