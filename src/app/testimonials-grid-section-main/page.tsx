@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Barlow_Semi_Condensed } from "next/font/google";
+import styles from "./styles.module.css";
 
 const barlow_semi_condensed = Barlow_Semi_Condensed({
   weight: ["500", "600"],
@@ -82,7 +83,15 @@ export default function Page() {
     <body
       className={`${barlow_semi_condensed.className}
       bg-[color:hsl(210,46%,95%)] text-[13px]`}
-    ></body>
+    >
+      <div
+        className={`${styles.areas_card} ${styles.areas_card_md} mt-16 grid grid-cols-1 md:grid-cols-4`}
+      >
+        {data.map((props, i) => (
+          <Card key={i} style={{ gridArea: `c${i + 1}` }} {...props} />
+        ))}
+      </div>
+    </body>
   );
 }
 
@@ -108,5 +117,15 @@ function Card({
   profileImg,
   name,
 }: Props) {
-  return <div></div>;
+  return (
+    <div style={style}>
+      <div className={`${bgColorClass} h-1`} />
+      <div className="p-7">
+        <h1 className="mb-3 text-2xl font-semibold text-[color:hsl(234,12%,34%)]">
+          {title}
+        </h1>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
 }

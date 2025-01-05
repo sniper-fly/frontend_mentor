@@ -1,0 +1,16 @@
+.areas_card {
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5";
+}
+
+@media (min-width: 768px) {
+  .areas_card_md {
+    grid-template-areas:
+      "c1 c1 c2 c5"
+      "c3 c4 c4 c5";
+  }
+}
