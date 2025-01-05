@@ -84,13 +84,15 @@ export default function Page() {
       className={`${barlow_semi_condensed.className}
       bg-[color:hsl(210,46%,95%)] text-[13px]`}
     >
-      <div
-        className={`${styles.areas_card} ${styles.areas_card_md} mt-16 grid grid-cols-1 md:grid-cols-4`}
-      >
-        {data.map((props, i) => (
-          <Card key={i} style={{ gridArea: `c${i + 1}` }} {...props} />
-        ))}
-      </div>
+      <main className="container p-5">
+        <div
+          className={`${styles.areas_card} ${styles.areas_card_md} mt-16 grid grid-cols-1 gap-7 md:grid-cols-4`}
+        >
+          {data.map((props, i) => (
+            <Card key={i} style={{ gridArea: `c${i + 1}` }} {...props} />
+          ))}
+        </div>
+      </main>
     </body>
   );
 }
@@ -118,14 +120,12 @@ function Card({
   name,
 }: Props) {
   return (
-    <div style={style}>
-      <div className={`${bgColorClass} h-1`} />
-      <div className="p-7">
-        <h1 className="mb-3 text-2xl font-semibold text-[color:hsl(234,12%,34%)]">
-          {title}
-        </h1>
-        <p>{description}</p>
-      </div>
+    <div
+      style={style}
+      className={`${className} ${textColorClass} ${bgColorClass} rounded-xl p-6 shadow-md`}
+    >
+      <h1 className="mb-3 text-2xl font-semibold">{title}</h1>
+      <p className="opacity-50">{description}</p>
     </div>
   );
 }
