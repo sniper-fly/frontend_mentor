@@ -124,6 +124,15 @@ function Card({
       style={style}
       className={`${className} ${textColorClass} ${bgColorClass} rounded-xl p-6 shadow-md`}
     >
+      <div className="relative h-10 w-10 overflow-hidden rounded-full">
+        <Image
+          src={profileImg}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          alt="profileImg"
+        />
+      </div>
       <h1 className="mb-3 text-2xl font-semibold">{title}</h1>
       <p className="opacity-50">{description}</p>
     </div>
